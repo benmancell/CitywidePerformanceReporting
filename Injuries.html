@@ -64,19 +64,8 @@
               })
 			dataToPlot[0].type = "bar";
 			dataToPlot[0].yAxis = 1;
-			dataToPlot[1].type = "bar";
-			dataToPlot[1].yAxis = 1;
-			dataToPlot[2].type = "line";
-			dataToPlot[2].yAxis = 2;
-			<!-- dataToPlot[3].type = "line"; -->
-			<!-- dataToPlot[3].yAxis = 1; -->
-			<!-- dataToPlot[3].classed = "dashed_NB"; -->
-			<!-- dataToPlot[4].type = "line"; -->
-			<!-- dataToPlot[4].yAxis = 1; -->
-			<!-- dataToPlot[4].classed = "dashed_A1"; -->
-			<!-- dataToPlot[5].type = "line"; -->
-			<!-- dataToPlot[5].yAxis = 2; -->
-			<!-- dataToPlot[5].classed = "dashed_Fatalities"; -->
+			dataToPlot[1].type = "line";
+			dataToPlot[1].yAxis = 2;
             
             nv.addGraph(function () {
                 var chart = nv.models.multiChart()	
@@ -87,9 +76,10 @@
 						left: 70
 					})
 					.options({focusEnable: false})
+					.color(["#1875B8","#FC7F15"]);
 					
-				chart.bars1.stacked(true);
-				chart.bars2.stacked(true);
+				<!-- chart.bars1.stacked(true); -->
+				<!-- chart.bars2.stacked(true); -->
                 chart.xAxis.tickFormat(function (d) { return d3.time.format('%b-%y')(new Date(d)) });
 				
                 d3.select('#chart svg')
