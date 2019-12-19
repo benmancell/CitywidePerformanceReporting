@@ -1,0 +1,85 @@
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8">
+
+    <link href="../build/nv.d3.css" rel="stylesheet" type="text/css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.2/d3.min.js" charset="utf-8"></script>
+    <script src="../build/nv.d3.js"></script>
+
+
+    <style>
+        text {
+            font: 14px sans-serif;
+        }
+        svg {
+            display: block;
+        }
+        html, body, #chart, svg {
+            margin: 0px;
+            padding: 0px;
+            height: 100%;
+            width: 100%;
+        }
+		.nvd3 g.nv-groups path.nv-line {
+			stroke-width: 3px;
+		}
+		.dashed {
+			stroke-dasharray: 10, 10;
+		}
+    </style>
+
+</head>
+<body>
+
+    <div id="chart">
+        <svg></svg>
+    </div>
+
+    <script>
+
+        d3.csv("data/AppointmentsApplicationApproval.csv",function(err,data){
+
+            //get each col of the data, except date col
+            var dataToPlot = Object.keys(data[0]).filter(function(k){return k!="date"})
+              .map(function(k){
+                  return {"key":k,"values":data.map(function(d){
+                      return {
+                          "x":d3.time.format("%_m/%_d/%Y").parse(d.date),
+                          "y":+d[k]
+                      }
+                  })}
+              })
+
+            
+            nv.addGraph(function () {
+                var chart = nv.models.lineChart()
+					.useInteractiveGuideline(true)
+					.margin({
+						top: 30, 
+						right: 60, 
+						bottom: 50, 
+						left: 70
+					})
+					//.color(["#1875B8","#AEC8EB","#FC7F15","#104b76"]);
+                chart.xAxis.tickFormat(function (d) { return d3.time.format('%b-%y')(new Date(d)) });
+                chart.xScale(d3.time.scale()); //fixes misalignment of timescale with line graph
+
+                chart.yAxis
+                  .tickFormat(d3.format('.1f'));
+			
+                d3.select('#chart svg')
+                  .datum(dataToPlot)
+                  .transition().duration(500)
+                  .call(chart)
+                ;
+
+                nv.utils.windowResize(chart.update);
+
+                return chart;
+            });
+        })
+
+    </script>
+</body>
+</html>

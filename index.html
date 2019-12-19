@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CPR</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no' />
+  <link rel="stylesheet" type="text/css" href="assets/lib/bootstrap/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="assets/css/keen-dashboards.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body class="application">
+<style>
+.navbar.navbar-inverse .navbar-header .navbar-brand {
+        display: block;
+        text-align:center;
+        float: none;
+        vertical-align: top;
+}
+
+.navbar.navbar-inverse .navbar-header{
+  float: none; 
+}
+#nav_bar {
+	background-color: #AEC8EB;
+	border-color: #AEC8EB;
+	width: 100%;
+	height: 40px;
+	margin-bottom: 10px;
+}
+#indicator {
+	float: right;
+}
+.logo {
+	background-image: url('data/doblogo.png');
+	background-repeat: no-repeat;
+	background-position: center;
+	float: right;
+	background-size: 70px;
+	height: 50px;
+	width: 110px;	 
+}
+</style>
+
+
+
+  <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+  <a class="logo" href="https://www1.nyc.gov/site/buildings/index.page" target="_blank"> </a>
+    <ul id="indicator" class="nav navbar-nav">
+        <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Jump To Indicator<b class="caret"></b></a>
+            <ul class="dropdown-menu">
+                <li><a href="#ConstructionIncdts">Construction Incidents</a></li>
+				<li><a href="#Cmplts">Complaints</a></li>
+                <li><a href="#Vios">Violations</a></li>
+				<li><a href="#ConstructionInsp">Construction Inspections</a></li>
+				<li><a href="#DevInsp">Development Inspections</a></li>
+				<li><a href="#App">Applications</a></li>
+				<li><a href="#PlanRev">Plan Reviews</a></li>
+				<li><a href="#Rev">Revenue</a></li>
+				<li><a href="#Litig">Litigation</a></li>
+            </ul>
+        </li>
+    </ul> 
+    <div class="container-fluid">
+      <div class="navbar-header">
+		<div style="text-align:left;">
+			<h3 style="color:white; margin:15px 10px 10px;">CPR DASHBOARD</h3>
+        </div>
+		<!-- <a href="#Litigation">Litigation</a> -->
+
+      </div>
+    </div>
+
+  </nav>
+
+  <div class="container-fluid">
+
+    <!-- <div class="row"> -->
+		<!-- <nav id="nav_bar" class="navbar navbar-inverse navbar-header" role="navigation"> -->
+			<!-- <div style="text-align:left;"> -->
+				<!-- <h4 style="color:white; margin:10px 10px 10px;">VIOLATIONS</h4> -->
+			<!-- </div> -->
+		<!-- </nav>  -->
+	<!-- </div> -->
+	
+    <div id="ConstructionIncdts" class="row" class="navbar navbar-inverse navbar-header" role="navigation">
+		<nav id="nav_bar">
+			<div style="text-align:left; padding-top:1px;">
+				<h4 style="margin:10px 10px 10px 20px;">CONSTRUCTION INCIDENTS</h4>
+			</div>
+		</nav> 
+	</div>
+	
+    <div class="row">	
+	
+      <div class="col-sm-6">
+        <div class="chart-wrapper">
+          <div class="chart-title">
+            Construction-Related Injuries & Fatalities
+          </div>
+          <div class="chart-stage">
+            <iframe width="100%" height="350px" frameborder="0" scrolling="no" src="Injuries.html"></iframe>
+          </div>
+          <!-- <div class="chart-notes"> -->
+            <!-- Average business days from the current request date of a development inspection to the date of inspection -->
+          <!-- </div> -->
+        </div>
+      </div>
+
+    </div>
+	
+    <div id="Cmplts" class="row" class="navbar navbar-inverse navbar-header" role="navigation">
+		<nav id="nav_bar">
+			<div style="text-align:left; padding-top:1px;">
+				<h4 style="margin:10px 10px 10px 20px;">COMPLAINTS</h4>
+			</div>
+		</nav> 
+	</div>
+	
+    <div class="row">
+
+      <div class="col-sm-6">
+        <div class="chart-wrapper">
+          <div class="chart-title">
+            Complaints: Priority A
+          </div>
+          <div class="chart-stage">
+            <iframe width="100%" height="350px" frameborder="0" scrolling="no" src="Complaints_A.html"></iframe>
+          </div>
+          <!-- <div class="chart-notes"> -->
+            <!-- Average business days from filing date to first status of incomplete, objection, or approval -->
+          <!-- </div> -->
+        </div>
+      </div>
+
+      <div class="col-sm-6">
+        <div class="chart-wrapper">
+          <div class="chart-title">
+            Complaints: Priority A Top 3 Dispositions
+          </div>
+          <div class="chart-stage">
+            <iframe width="100%" height="350px" frameborder="0" scrolling="no" src="Complaints_TopA.html"></iframe>
+          </div>
+          <!-- <div class="chart-notes"> -->
+            <!-- Average business days from the current request date of a development inspection to the date of inspection -->
+          <!-- </div> -->
+        </div>
+      </div>
+
+    </div>
+	
+    <div class="row">
+
+      <div class="col-sm-6">
+        <div class="chart-wrapper">
+          <div class="chart-title">
+            Complaints: Priority B
+          </div>
+          <div class="chart-stage">
+            <iframe width="100%" height="350px" frameborder="0" scrolling="no" src="Complaints_B.html"></iframe>
+          </div>
+          <!-- <div class="chart-notes"> -->
+            <!-- Average business days from filing date to first status of incomplete, objection, or approval -->
+          <!-- </div> -->
+        </div>
+      </div>
+
+      <div class="col-sm-6">
+        <div class="chart-wrapper">
+          <div class="chart-title">
+            Complaints: Priority B Top 3 Dispositions
+          </div>
+          <div class="chart-stage">
+            <iframe width="100%" height="350px" frameborder="0" scrolling="no" src="Complaints_TopB.html"></iframe>
+          </div>
+          <!-- <div class="chart-notes"> -->
+            <!-- Average business days from the current request date of a development inspection to the date of inspection -->
+          <!-- </div> -->
+        </div>
+      </div>
+
+    </div>
+	
+    <div class="row">
+
+      <div class="col-sm-6">
+        <div class="chart-wrapper">
+          <div class="chart-title">
+            Complaints: Priority C
+          </div>
+          <div class="chart-stage">
+            <iframe width="100%" height="350px" frameborder="0" scrolling="no" src="Complaints_C.html"></iframe>
+          </div>
+          <!-- <div class="chart-notes"> -->
+            <!-- Average business days from filing date to first status of incomplete, objection, or approval -->
+          <!-- </div> -->
+        </div>
+      </div>
+
+      <div class="col-sm-6">
+        <div class="chart-wrapper">
+          <div class="chart-title">
+            Complaints: Priority C Top 3 Dispositions
+          </div>
+          <div class="chart-stage">
+            <iframe width="100%" height="350px" frameborder="0" scrolling="no" src="Complaints_TopC.html"></iframe>
+          </div>
+          <!-- <div class="chart-notes"> -->
+            <!-- Average business days from the current request date of a development inspection to the date of inspection -->
+          <!-- </div> -->
+        </div>
+      </div>
+
+    </div>
+	
+    <div class="row">
+
+      <div class="col-sm-6">
+        <div class="chart-wrapper">
+          <div class="chart-title">
+            Complaints: Priority D
+          </div>
+          <div class="chart-stage">
+            <iframe width="100%" height="350px" frameborder="0" scrolling="no" src="Complaints_D.html"></iframe>
+          </div>
+          <!-- <div class="chart-notes"> -->
+            <!-- Average business days from filing date to first status of incomplete, objection, or approval -->
+          <!-- </div> -->
+        </div>
+      </div>
+
+      <div class="col-sm-6">
+        <div class="chart-wrapper">
+          <div class="chart-title">
+            Complaints: Priority D Top 3 Dispositions
+          </div>
+          <div class="chart-stage">
+            <iframe width="100%" height="350px" frameborder="0" scrolling="no" src="Complaints_TopD.html"></iframe>
+          </div>
+          <!-- <div class="chart-notes"> -->
+            <!-- Average business days from the current request date of a development inspection to the date of inspection -->
+          <!-- </div> -->
+        </div>
+      </div>
+
+    </div>
+	
+    <div class="row">
+
+      <div class="col-sm-6">
+        <div class="chart-wrapper">
+          <div class="chart-title">
+            Complaints: 311
+          </div>
+          <div class="chart-stage">
+            <iframe width="100%" height="350px" frameborder="0" scrolling="no" src="Complaints_311.html"></iframe>
+          </div>
+          <!-- <div class="chart-notes"> -->
+            <!-- Average business days from filing date to first status of incomplete, objection, or approval -->
+          <!-- </div> -->
+        </div>
+      </div>
+
+      <div class="col-sm-6">
+        <div class="chart-wrapper">
+          <div class="chart-title">
+            Complaints: 311 Top 3 Dispositions
+          </div>
+          <div class="chart-stage">
+            <iframe width="100%" height="350px" frameborder="0" scrolling="no" src="Complaints_Top311.html"></iframe>
+          </div>
+          <!-- <div class="chart-notes"> -->
+            <!-- Average business days from the current request date of a development inspection to the date of inspection -->
+          <!-- </div> -->
+        </div>
+      </div>
+
+    </div>
+	
+    <div class="row">
+
+      <div class="col-sm-6">
+        <div class="chart-wrapper">
+          <div class="chart-title">
+            Complaints: Residential Illegal Conversion Where Access Was Obtained 
+          </div>
+          <div class="chart-stage">
+            <iframe width="100%" height="350px" frameborder="0" scrolling="no" src="Complaints_ResidentialIllegalConversion.html"></iframe>
+          </div>
+          <!-- <div class="chart-notes"> -->
+            <!-- Average business days from filing date to first status of incomplete, objection, or approval -->
+          <!-- </div> -->
+        </div>
+      </div>
+
+      <div class="col-sm-6">
+        <div class="chart-wrapper">
+          <div class="chart-title">
+            Complaints: Vacate Orders Issued
+          </div>
+          <div class="chart-stage">
+            <iframe width="100%" height="350px" frameborder="0" scrolling="no" src="VacateOrdersIssued.html"></iframe>
+          </div>
+          <!-- <div class="chart-notes"> -->
+            <!-- Average business days from the current request date of a development inspection to the date of inspection -->
+          <!-- </div> -->
+        </div>
+      </div>
+
+    </div>
+	
+    <div class="row">
+
+      <div class="col-sm-6">
+        <div class="chart-wrapper">
+          <div class="chart-title">
+            Complaints: CSE Stop Work Order Re-Inspection Requests 
+          </div>
+          <div class="chart-stage">
+            <iframe width="100%" height="350px" frameborder="0" scrolling="no" src="CSE_SWO.html"></iframe>
+          </div>
+          <!-- <div class="chart-notes"> -->
+            <!-- Average business days from filing date to first status of incomplete, objection, or approval -->
+          <!-- </div> -->
+        </div>
+      </div>
+
+      <div class="col-sm-6">
+        <div class="chart-wrapper">
+          <div class="chart-title">
+            Complaints: Stop Work Orders Issued & Lifted
+          </div>
+          <div class="chart-stage">
+            <iframe width="100%" height="350px" frameborder="0" scrolling="no" src="SWO_Lifted.html"></iframe>
+          </div>
+          <!-- <div class="chart-notes"> -->
+            <!-- Average business days from the current request date of a development inspection to the date of inspection -->
+          <!-- </div> -->
+        </div>
+      </div>
+
+    </div>
+	
+    <div id="Vios" class="row" class="navbar navbar-inverse navbar-header" role="navigation">
+		<nav id="nav_bar">
+			<div style="text-align:left; padding-top:1px;">
+				<h4 style="margin:10px 10px 10px 20px;">VIOLATIONS</h4>
+			</div>
+		</nav> 
+	</div>
+	
+    <div class="row">	
+      <div class="col-sm-6">
+        <div class="chart-wrapper">
+          <div class="chart-title">
+            Violations: ECB & DOB
+          </div>
+          <div class="chart-stage">
+            <iframe width="100%" height="350px" frameborder="0" scrolling="no" src="Violations.html"></iframe>
+          </div>
+          <!-- <div class="chart-notes"> -->
+            <!-- Average business days from filing date to first status of incomplete, objection, or approval -->
+          <!-- </div> -->
+        </div>
+      </div>
+    </div>
+	
+    <div id="ConstructionInsp" class="row" class="navbar navbar-inverse navbar-header" role="navigation">
+		<nav id="nav_bar">
+			<div style="text-align:left; padding-top:1px;">
+				<h4 style="margin:10px 10px 10px 20px;">CONSTRUCTION INSPECTIONS</h4>
+			</div>
+		</nav> 
+	</div>
+	
+    <div class="row">
+
+      <div class="col-sm-6">
+        <div class="chart-wrapper">
+          <div class="chart-title">
+            Construction Inspections: Completed 
+          </div>
+          <div class="chart-stage">
+            <iframe width="100%" height="350px" frameborder="0" scrolling="no" src="ConstructionInspections.html"></iframe>
+          </div>
+          <!-- <div class="chart-notes"> -->
+            <!-- Average business days from filing date to first status of incomplete, objection, or approval -->
+          <!-- </div> -->
+        </div>
+      </div>
+
+      <div class="col-sm-6">
+        <div class="chart-wrapper">
+          <div class="chart-title">
+            Construction Inspections: Safety Compliance & Enforcement
+          </div>
+          <div class="chart-stage">
+            <iframe width="100%" height="350px" frameborder="0" scrolling="no" src="ConstructionSafety.html"></iframe>
+          </div>
+          <!-- <div class="chart-notes"> -->
+            <!-- Average business days from the current request date of a development inspection to the date of inspection -->
+          <!-- </div> -->
+        </div>
+      </div>
+
+    </div>
+	
+    <div id="DevInsp" class="row" class="navbar navbar-inverse navbar-header" role="navigation">
+		<nav id="nav_bar">
+			<div style="text-align:left; padding-top:1px;">
+				<h4 style="margin:10px 10px 10px 20px;">DEVELOPMENT INSPECTIONS</h4>
+			</div>
+		</nav> 
+	</div>
+	
+    <div class="row">
+
+      <div class="col-sm-6">
+        <div class="chart-wrapper">
+          <div class="chart-title">
+            Development Inspections: Average Wait Time (Days) 
+          </div>
+          <div class="chart-stage">
+            <iframe width="100%" height="350px" frameborder="0" scrolling="no" src="Development_Inspections.html"></iframe>
+          </div>
+          <!-- <div class="chart-notes"> -->
+            <!-- Average business days from filing date to first status of incomplete, objection, or approval -->
+          <!-- </div> -->
+        </div>
+      </div>
+
+    </div>
+	
+    <div id="App" class="row" class="navbar navbar-inverse navbar-header" role="navigation">
+		<nav id="nav_bar">
+			<div style="text-align:left; padding-top:1px;">
+				<h4 style="margin:10px 10px 10px 20px;">APPLICATIONS</h4>
+			</div>
+		</nav> 
+	</div>
+	
+    <div class="row">
+	
+      <div class="col-sm-6">
+        <div class="chart-wrapper">
+          <div class="chart-title">
+            Applications: Job Filings
+          </div>
+          <div class="chart-stage">
+            <iframe width="100%" height="350px" frameborder="0" scrolling="no" src="JobFilings.html"></iframe>
+          </div>
+          <!-- <div class="chart-notes"> -->
+            <!-- Average business days from the current request date of a development inspection to the date of inspection -->
+          <!-- </div> -->
+        </div>
+      </div>
+
+      <div class="col-sm-6">
+        <div class="chart-wrapper">
+          <div class="chart-title">
+            Applications: Permits Issued (Initial & Renewal)
+          </div>
+          <div class="chart-stage">
+            <iframe width="100%" height="350px" frameborder="0" scrolling="no" src="PermitsIssued.html"></iframe>
+          </div>
+          <!-- <div class="chart-notes"> -->
+            <!-- Average business days from filing date to first status of incomplete, objection, or approval -->
+          <!-- </div> -->
+        </div>
+      </div>
+
+    </div>
+	
+    <div id="PlanRev" class="row" class="navbar navbar-inverse navbar-header" role="navigation">
+		<nav id="nav_bar">
+			<div style="text-align:left; padding-top:1px;">
+				<h4 style="margin:10px 10px 10px 20px;">PLAN REVIEWS</h4>
+			</div>
+		</nav> 
+	</div>
+	
+    <div class="row">
+	
+      <div class="col-sm-6">
+        <div class="chart-wrapper">
+          <div class="chart-title">
+            Plan Reviews: Average Days To Complete First Plan Review (Borough Offices)
+          </div>
+          <div class="chart-stage">
+            <iframe width="100%" height="350px" frameborder="0" scrolling="no" src="FirstPlanReview_Boro.html"></iframe>
+          </div>
+          <!-- <div class="chart-notes"> -->
+            <!-- Average business days from the current request date of a development inspection to the date of inspection -->
+          <!-- </div> -->
+        </div>
+      </div>
+
+      <div class="col-sm-6">
+        <div class="chart-wrapper">
+          <div class="chart-title">
+            Plan Reviews: Average Days To Complete First Plan Review (Hub Projects)
+          </div>
+          <div class="chart-stage">
+            <iframe width="100%" height="350px" frameborder="0" scrolling="no" src="FirstPlanReview_Hub.html"></iframe>
+          </div>
+          <!-- <div class="chart-notes"> -->
+            <!-- Average business days from filing date to first status of incomplete, objection, or approval -->
+          <!-- </div> -->
+        </div>
+      </div>
+
+    </div>
+	
+    <div class="row">
+
+      <div class="col-sm-6">
+        <div class="chart-wrapper">
+          <div class="chart-title">
+            Plan Reviews: Average Days To Complete First Plan Review (Affordable Housing)
+          </div>
+          <div class="chart-stage">
+            <iframe width="100%" height="350px" frameborder="0" scrolling="no" src="FirstPlanReview_AffordableHousing.html"></iframe>
+          </div>
+          <!-- <div class="chart-notes"> -->
+            <!-- Average business days from the current request date of a development inspection to the date of inspection -->
+          <!-- </div> -->
+        </div>
+      </div>
+	  
+      <div class="col-sm-6">
+        <div class="chart-wrapper">
+          <div class="chart-title">
+            Plan Reviews: Borough Office Ticket Wait Times (Average Minutes)
+          </div>
+          <div class="chart-stage">
+            <iframe width="100%" height="350px" frameborder="0" scrolling="no" src="BoroughOfficeWaitTimes.html"></iframe>
+          </div>
+          <!-- <div class="chart-notes"> -->
+            <!-- Average business days from filing date to first status of incomplete, objection, or approval -->
+          <!-- </div> -->
+        </div>
+      </div>
+
+    </div>
+	
+	
+    <div class="row">
+
+      <div class="col-sm-6">
+        <div class="chart-wrapper">
+          <div class="chart-title">
+            Plan Reviews: Appointments To Application Approval (Average)
+          </div>
+          <div class="chart-stage">
+            <iframe width="100%" height="350px" frameborder="0" scrolling="no" src="AppointmentsApplicationApproval.html"></iframe>
+          </div>
+          <!-- <div class="chart-notes"> -->
+            <!-- Average business days from the current request date of a development inspection to the date of inspection -->
+          <!-- </div> -->
+        </div>
+      </div>
+
+    </div>
+	
+    <div id="Rev" class="row" class="navbar navbar-inverse navbar-header" role="navigation">
+		<nav id="nav_bar">
+			<div style="text-align:left; padding-top:1px;">
+				<h4 style="margin:10px 10px 10px 20px;">REVENUE</h4>
+			</div>
+		</nav> 
+	</div>
+	
+    <div class="row">
+
+      <div class="col-sm-6">
+        <div class="chart-wrapper">
+          <div class="chart-title">
+            Revenue: Total Generated (Millions)
+          </div>
+          <div class="chart-stage">
+            <iframe width="100%" height="350px" frameborder="0" scrolling="no" src="Revenue.html"></iframe>
+          </div>
+          <!-- <div class="chart-notes"> -->
+            <!-- Average business days from the current request date of a development inspection to the date of inspection -->
+          <!-- </div> -->
+        </div>
+      </div>
+
+    </div>
+	
+    <div id="Litig" class="row" class="navbar navbar-inverse navbar-header" role="navigation">
+		<nav id="nav_bar">
+			<div style="text-align:left; padding-top:1px;">
+				<h4 style="margin:10px 10px 10px 20px;">LITIGATION</h4>
+			</div>
+		</nav> 
+	</div>
+	
+    <div class="row">
+	
+      <div class="col-sm-6">
+        <div class="chart-wrapper">
+          <div class="chart-title">
+            Litigation: Disciplinary Cases
+          </div>
+          <div class="chart-stage">
+            <iframe width="100%" height="350px" frameborder="0" scrolling="no" src="DisciplinaryCases.html"></iframe>
+          </div>
+          <!-- <div class="chart-notes"> -->
+            <!-- Average business days from the current request date of a development inspection to the date of inspection -->
+          <!-- </div> -->
+        </div>
+      </div>
+
+      <div class="col-sm-6">
+        <div class="chart-wrapper">
+          <div class="chart-title">
+            Litigation: Adjudicated ECB Violations
+          </div>
+          <div class="chart-stage">
+            <iframe width="100%" height="350px" frameborder="0" scrolling="no" src="AdjudicatedECB.html"></iframe>
+          </div>
+          <!-- <div class="chart-notes"> -->
+            <!-- Average business days from the current request date of a development inspection to the date of inspection -->
+          <!-- </div> -->
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <script type="text/javascript" src="assets/lib/jquery/dist/jquery.min.js"></script>
+  <script type="text/javascript" src="assets/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+
+  <script type="text/javascript" src="assets/lib/holderjs/holder.js"></script>
+  <script>
+    Holder.add_theme("white", { background:"#fff", foreground:"#a7a7a7", size:10 });
+  </script>
+
+
+  <script type="text/javascript" src="assets/lib/keen-js/dist/keen.min.js"></script>
+  <script type="text/javascript" src="assets/js/meta.js"></script>
+
+
+</body>
+</html>
