@@ -72,7 +72,9 @@
 					
 				chart.bars1.stacked(true);
 				chart.bars2.stacked(true);
-                chart.xAxis.tickFormat(function (d) { return d3.time.format('%b-%y')(new Date(d)) });
+                chart.xAxis.tickFormat(function (d) { return d3.time.format('%b-%y')(new Date(d)) })
+							.showMaxMin(false)
+							.staggerLabels(true);
 				chart.yAxis1.tickFormat(d3.format(","));
 				chart.yAxis2.tickFormat(d3.format(".1f"));
 				
