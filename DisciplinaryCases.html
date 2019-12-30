@@ -62,7 +62,8 @@
 						left: 70
 					})
 					.color(["#1875B8","#AEC8EB","#FC7F15","#60c700"]);
-                chart.xAxis.tickFormat(function (d) { return d3.time.format('%b-%y')(new Date(d)) });
+                chart.xAxis.tickFormat(function (d) { return d3.time.format('%b-%y')(new Date(d)) })
+		    		.showMaxMin(false);
                 chart.xScale(d3.time.scale()); //fixes misalignment of timescale with line graph
 
                 <!-- chart.yAxis -->
