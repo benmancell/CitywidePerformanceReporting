@@ -80,7 +80,8 @@
 					
 				<!-- chart.bars1.stacked(true); -->
 				<!-- chart.bars2.stacked(true); -->
-                chart.xAxis.tickFormat(function (d) { return d3.time.format('%b-%y')(new Date(d)) });
+                chart.xAxis.tickFormat(function (d) { return d3.time.format('%b-%y')(new Date(d)) })
+							.staggerLabels(true);
 				
                 d3.select('#chart svg')
                   .datum(dataToPlot)
