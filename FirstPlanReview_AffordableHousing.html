@@ -73,7 +73,9 @@
 					.options({focusEnable: false})
 					.color(["#1875B8","#FC7F15","#B9B9B9"]);
 					
-                chart.xAxis.tickFormat(function (d) { return d3.time.format('%b-%y')(new Date(d)) });
+                chart.xAxis.tickFormat(function (d) { return d3.time.format('%b-%y')(new Date(d)) })
+							.showMaxMin(false)
+							.staggerLabels(true);
 				chart.yAxis1.tickFormat(d3.format(","));
 				chart.yAxis2.tickFormat(d3.format(".1f"));
 				chart.yDomain2([0,20]);
