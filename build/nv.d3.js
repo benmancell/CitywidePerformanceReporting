@@ -1867,17 +1867,28 @@ nv.utils.arrayEquals = function (array1, array2) {
                 var maxMinRange = [];
                 wrap.selectAll('g.nv-axisMaxMin')
                     .each(function(d,i) {
-                        try {
-                            if (i) // i== 1, max position
-                                maxMinRange.push(scale(d) - this.getBoundingClientRect().width - 4);  //assuming the max and min labels are as wide as the next tick (with an extra 4 pixels just in case)
-                            else // i==0, min position
-                                maxMinRange.push(scale(d) + this.getBoundingClientRect().width + 4)
-                        }catch (err) {
-                            if (i) // i== 1, max position
-                                maxMinRange.push(scale(d) - 4);  //assuming the max and min labels are as wide as the next tick (with an extra 4 pixels just in case)
-                            else // i==0, min position
-                                maxMinRange.push(scale(d) + 4);
-                        }
+                        // try {
+                            // if (i) // i== 1, max position
+                                // maxMinRange.push(scale(d) - this.getBoundingClientRect().width - 4);  //assuming the max and min labels are as wide as the next tick (with an extra 4 pixels just in case)
+                            // else // i==0, min position
+                                // maxMinRange.push(scale(d) + this.getBoundingClientRect().width + 4)
+                        // }catch (err) {
+                            // if (i) // i== 1, max position
+                                // maxMinRange.push(scale(d) - 4);  //assuming the max and min labels are as wide as the next tick (with an extra 4 pixels just in case)
+                            // else // i==0, min position
+                                // maxMinRange.push(scale(d) + 4);
+                        // }
+						try {
+								if (i) // i== 1, max position
+									maxMinRange.push(scale(d));
+								else // i==0, min position
+									maxMinRange.push(scale(d))
+						 }catch (err) {
+								 if (i) // i== 1, max position
+									  maxMinRange.push(scale(d));
+								 else // i==0, min position
+									  maxMinRange.push(scale(d));
+						 }
                     });
                 // the g's wrapping each tick
                 g.selectAll('g').each(function(d, i) {
