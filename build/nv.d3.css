@@ -590,8 +590,18 @@ svg.nvd3-svg {
 }
 
 
+/* ADDED THIS FOR CPR CHARTS */
+		.nvtooltip thead {
+		  font-size: 12px !important;
+		}
+		.nvtooltip tbody {
+		  font-size: 10px !important;
+		}
+		
+		
 .nvtooltip table td {
-    padding: 2px 9px 2px 0;
+    /* padding: 2px 9px 2px 0; */
+	padding: 2px 2px 2px 0;
     vertical-align: middle;
 }
 
