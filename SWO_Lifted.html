@@ -73,6 +73,7 @@
                 chart.xAxis.tickFormat(function (d) { return d3.time.format('%b-%y')(new Date(d)) })
 							.showMaxMin(false)
 							.staggerLabels(true);
+				chart.xAxis.rotateLabels(-45);
 				chart.yAxis1.tickFormat(d3.format(".1%")); 
 				
                 d3.select('#chart svg')
