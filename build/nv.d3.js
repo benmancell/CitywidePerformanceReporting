@@ -540,7 +540,7 @@ nv.models.tooltip = function() {
     */
     var id = "nvtooltip-" + Math.floor(Math.random() * 100000) // Generates a unique id when you create a new tooltip() object.
         ,   data = null
-        ,   gravity = 'w'   // Can be 'n','s','e','w'. Determines how tooltip is positioned.
+        ,   gravity = 's'   // Can be 'n','s','e','w'. Determines how tooltip is positioned. CHANGED FROM w TO s FOR CPR DASHBOARD
         ,   distance = 25 // Distance to offset tooltip from the mouse location.
         ,   snapDistance = 0   // Tolerance allowed before tooltip is moved from its current position (creates 'snapping' effect)
         ,   classes = null  // Attaches additional CSS classes to the tooltip DIV that is created.
