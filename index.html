@@ -39,6 +39,93 @@
 	height: 50px;
 	width: 110px;	 
 }
+#chart-01{
+    box-sizing: border-box;
+    width: 100%;
+	background-color: #3D4B58;
+}
+
+
+#budgetHC{
+	font-size: 40px;
+	font-weight: bold;
+	color: #FFFFFF;
+	font-family: 'Open Sans', sans-serif;
+	font-family: 'Roboto', sans-serif;	
+	text-align: center;
+	line-height: 150%;
+	
+}
+#budgetHC_txt{
+	font-size: 28px;
+	font-weight: bold;
+	color: #FFFFFF;
+	font-family: 'Open Sans', sans-serif;
+	font-family: 'Roboto', sans-serif;
+	text-align: center;
+	line-height: 97%;
+	padding-top: 10px;
+}
+#activeHC{
+	font-size: 40px;
+	font-weight: bold;
+	color: #FFFFFF;
+	font-family: 'Open Sans', sans-serif;
+	font-family: 'Roboto', sans-serif;	
+	text-align: center;
+	line-height: 150%;
+	
+}
+#activeHC_txt{
+	font-size: 28px;
+	font-weight: bold;
+	color: #FFFFFF;
+	font-family: 'Open Sans', sans-serif;
+	font-family: 'Roboto', sans-serif;
+	text-align: center;
+	line-height: 97%;
+	padding-top: 10px;
+}
+#activeDev{
+	font-size: 40px;
+	font-weight: bold;
+	color: #FFFFFF;
+	font-family: 'Open Sans', sans-serif;
+	font-family: 'Roboto', sans-serif;	
+	text-align: center;
+	line-height: 150%;
+	
+}
+#activeDev_txt{
+	font-size: 28px;
+	font-weight: bold;
+	color: #FFFFFF;
+	font-family: 'Open Sans', sans-serif;
+	font-family: 'Roboto', sans-serif;
+	text-align: center;
+	line-height: 97%;
+	padding-top: 10px;
+}
+#activeEnf{
+	font-size: 40px;
+	font-weight: bold;
+	color: #FFFFFF;
+	font-family: 'Open Sans', sans-serif;
+	font-family: 'Roboto', sans-serif;	
+	text-align: center;
+	line-height: 150%;
+	
+}
+#activeEnf_txt{
+	font-size: 28px;
+	font-weight: bold;
+	color: #FFFFFF;
+	font-family: 'Open Sans', sans-serif;
+	font-family: 'Roboto', sans-serif;
+	text-align: center;
+	line-height: 97%;
+	padding-top: 10px;
+}
 </style>
 
 
@@ -58,6 +145,7 @@
 				<li><a href="#PlanRev">Plan Reviews</a></li>
 				<li><a href="#Rev">Revenue</a></li>
 				<li><a href="#Litig">Litigation</a></li>
+				<li><a href="#HeadCnt">Head Counts</a></li>
             </ul>
         </li>
     </ul> 
@@ -123,6 +211,7 @@
 
     </div>
 	
+		
     <div id="Cmplts" class="row" class="navbar navbar-inverse navbar-header" role="navigation">
 		<nav id="nav_bar">
 			<div style="text-align:left; padding-top:1px;">
@@ -641,12 +730,79 @@
       </div>
 
     </div>
+	
+    <div id="HeadCnt" class="row" class="navbar navbar-inverse navbar-header" role="navigation">
+		<nav id="nav_bar">
+			<div style="text-align:left; padding-top:1px;">
+				<h4 style="margin:10px 10px 10px 20px;">HEAD COUNTS (<span id="today"></span>)</h4>
+			</div>
+		</nav> 
+	</div>
+	
+    <div class="row">
+	
+      <div class="col-sm-3">
+        <div class="chart-wrapper">
+          <div class="chart-title" style="text-align:center;">
+            Budget Head Count
+          </div>
+          <div class="chart-stage" id="chart-01">
+            <div id="budgetHC_txt"><span id="budgetHC"></span></div>
+          </div>
+          <!-- <div class="chart-notes"> -->
+            <!-- Average business days from the current request date of a development inspection to the date of inspection -->
+          <!-- </div> -->
+        </div>
+      </div>
+
+      <div class="col-sm-3">
+        <div class="chart-wrapper">
+          <div class="chart-title" style="text-align:center;">
+            Active Head Count
+          </div>
+          <div class="chart-stage" id="chart-01">
+            <div id="activeHC_txt"><span id="activeHC"></span></div>
+          </div>
+          <!-- <div class="chart-notes"> -->
+            <!-- Average business days from the current request date of a development inspection to the date of inspection -->
+          <!-- </div> -->
+        </div>
+      </div>
+	  
+      <div class="col-sm-3">
+        <div class="chart-wrapper">
+          <div class="chart-title" style="text-align:center;">
+            Active Inspectors (DEV)
+          </div>
+          <div class="chart-stage" id="chart-01">
+            <div id="activeDev_txt"><span id="activeDev"></span></div>
+          </div>
+          <!-- <div class="chart-notes"> -->
+            <!-- Average business days from the current request date of a development inspection to the date of inspection -->
+          <!-- </div> -->
+        </div>
+      </div>
+	  
+      <div class="col-sm-3">
+        <div class="chart-wrapper">
+          <div class="chart-title" style="text-align:center;">
+            Active Inspectors (ENF)
+          </div>
+          <div class="chart-stage" id="chart-01">
+            <div id="activeEnf_txt"><span id="activeEnf"></span></div>
+          </div>
+          <!-- <div class="chart-notes"> -->
+            <!-- Average business days from the current request date of a development inspection to the date of inspection -->
+          <!-- </div> -->
+        </div>
+      </div>
+
+    </div>
 
   </div>
-
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.4.9/d3.min.js"></script>
   <script type="text/javascript" src="assets/lib/jquery/dist/jquery.min.js"></script>
   <script type="text/javascript" src="assets/lib/bootstrap/dist/js/bootstrap.min.js"></script>
-
   <script type="text/javascript" src="assets/lib/holderjs/holder.js"></script>
   <script>
     Holder.add_theme("white", { background:"#fff", foreground:"#a7a7a7", size:10 });
@@ -655,7 +811,61 @@
 
   <script type="text/javascript" src="assets/lib/keen-js/dist/keen.min.js"></script>
   <script type="text/javascript" src="assets/js/meta.js"></script>
+<script>
+$(document).ready(function(){
+	var today = new Date();
+	var month = new Array();
+	month[0] = "JANUARY";
+	month[1] = "FEBRUARY";
+	month[2] = "MARCH";
+	month[3] = "APRIL";
+	month[4] = "MAY";
+	month[5] = "JUNE";
+	month[6] = "JULY";
+	month[7] = "AUGUST";
+	month[8] = "SEPTEMBER";
+	month[9] = "OCTOBER";
+	month[10] = "NOVEMBER";
+	month[11] = "DECEMBER";	
+	//var mm = today.getMonth()+1;
+	var mm = month[today.getMonth()];
+	var yyyy = today.getFullYear();
+	today = mm + ' ' + yyyy;	
+	d3.select("#today").html(today);
+var bud;	
+	d3.csv("/data/HeadcountReport.csv", function(data) {
+		data.forEach(function(d){
+			d.date = d.date;
+			d.budgetHeadcount = +d["Budget Head Count"];
+			d.activeHeadcount = +d["Active Head Count"];
+			d.activeInspDev = +d["Active Inspectors (DEV)"];
+			d.activeInspEnf = +d["Active Inspectors (ENF)"];
+		});
+		
+		var bHC = data.filter(function(d){
+			return d.budgetHeadcount
+		})[0].budgetHeadcount;
+		d3.select("#budgetHC").html(bHC);
+		
+		var aHC = data.filter(function(d){
+			return d.activeHeadcount
+		})[0].activeHeadcount;
+		d3.select("#activeHC").html(aHC);
+		
+		var aDev = data.filter(function(d){
+			return d.activeInspDev
+		})[0].activeInspDev;
+		d3.select("#activeDev").html(aDev);
+		
+		var aEnf = data.filter(function(d){
+			return d.activeInspEnf
+		})[0].activeInspEnf;
+		d3.select("#activeEnf").html(aEnf);		
 
-
+	  
+	});
+	
+})
+</script>
 </body>
 </html>
