@@ -833,7 +833,7 @@ $(document).ready(function(){
 	today = mm + ' ' + yyyy;	
 	d3.select("#today").html(today);
 var bud;	
-	d3.csv("/data/HeadcountReport.csv", function(data) {
+	d3.csv("data/HeadcountReport.csv", function(data) {
 		data.forEach(function(d){
 			d.date = d.date;
 			d.budgetHeadcount = +d["Budget Head Count"];
