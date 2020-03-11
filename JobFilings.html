@@ -59,8 +59,8 @@
 			dataToPlot[1].yAxis = 1;
 			dataToPlot[2].type = "bar";
 			dataToPlot[2].yAxis = 1;
-			dataToPlot[3].type = "line";
-			dataToPlot[3].yAxis = 2;
+			<!-- dataToPlot[3].type = "line"; -->
+			<!-- dataToPlot[3].yAxis = 2; -->
 			<!-- dataToPlot[4].type = "line"; -->
 			<!-- dataToPlot[4].yAxis = 2; -->
 			<!-- dataToPlot[4].classed = "dashed"; -->
@@ -75,7 +75,8 @@
 					})
 					.options({focusEnable: false})
 		.legendRightAxisHint('')
-					.color(["#1875B8","#AEC8EB","#8ECA82","#FC7F15","#B9B9B9"]);
+					//.color(["#1875B8","#AEC8EB","#8ECA82","#FC7F15","#B9B9B9"]);
+					.color(["#1875B8","#AEC8EB","#8ECA82"]);
 					
 				chart.bars1.stacked(true);
 				chart.bars2.stacked(true);
