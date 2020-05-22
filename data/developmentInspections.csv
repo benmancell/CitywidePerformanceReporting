@@ -1,5 +1,4 @@
 date,Construction,Plumbing,Electrical,Boiler,Elevator,MMR Target (Construction),MMR Target (Plumbing),MMR Target (Electrical),MMR Target (Boiler),MMR Target (Elevator),BOC Target
-4/1/2019,1.9,2.5,2.3,1.5,2.3,4.5,5,6,2.16,1.86,3
 5/1/2019,2.1,2.2,2.2,1.4,1.7,4.5,5,6,2.16,1.86,3
 6/1/2019,2,2.6,2.8,1.5,2.1,4.5,5,6,2.16,1.86,3
 7/1/2019,1.7,2.2,2.5,1.3,2.6,4.5,5,6,2.16,1.86,3
@@ -11,3 +10,4 @@ date,Construction,Plumbing,Electrical,Boiler,Elevator,MMR Target (Construction),
 1/1/2020,2.2,2.6,2.3,2,3.4,4.5,5,6,2.16,1.86,3
 2/1/2020,1.97,2.12,2.91,1.51,3.46,4.5,5,6,2.16,1.86,3
 3/1/2020,1.95,2.5,2.48,1.53,2.71,4.5,5,6,2.16,1.86,3
+4/1/2020,0.96,1.56,0.88,1.66,2,4.5,5,6,2.16,1.86,3

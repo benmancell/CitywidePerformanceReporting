@@ -1,5 +1,4 @@
 date,Permits Issued (Initial & Renewal),Permitted Jobs Pro Cert,Permitted Jobs Pro Cert & Audited,BOC Target (Permitted Jobs Pro Cert)
-4/1/2019,16560,0.6229,0.172,0.7
 5/1/2019,11976,0.5697,0.181,0.7
 6/1/2019,14740,0.6137,0.155,0.7
 7/1/2019,13644,0.5803,0.175,0.7
@@ -10,4 +9,5 @@ date,Permits Issued (Initial & Renewal),Permitted Jobs Pro Cert,Permitted Jobs P
 12/1/2019,13273,0.6027,0.161,0.7
 1/1/2020,13572,0.6085,0.144,0.7
 2/1/2020,14231,0.5988,0.087,0.7
-2/1/2020,,,,0.7
+3/1/2020,13374,0.6694,0.056,0.7
+4/1/2020,4649,0.612,0.136,0.7
